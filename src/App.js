@@ -4,7 +4,7 @@ import ChildList from './components/ChildList.js';
 
 export default function App() {
   const [inputText, setInputText] = useState('');
-  const [todos, setTodos] = useState(['']);
+  const [todos, setTodos] = useState([]);
   const getNameFromChild1 = (getName) => {
     // setNames((prevNames) => {
     //   const updatedNames = [...prevNames];

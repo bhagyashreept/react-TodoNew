@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 export default function Child1(props) {
-  const [name, setName] = useState('');
-
   const getNameHandler = (e) => {
     e.preventDefault();
     props.setInputText(e.target.value);

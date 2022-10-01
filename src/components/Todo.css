@@ -1,0 +1,16 @@
+.todoText {
+  color: brown;
+}
+
+.todoText,
+.completed {
+  text-decoration: line-through;
+}
+
+.deleteButton {
+  background-color: brown;
+}
+
+.checkButton {
+  background-color: aquamarine;
+}
