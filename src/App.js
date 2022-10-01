@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Child1 from './components/Child1.js';
 import ChildList from './components/ChildList.js';
+import './components/Todo.css';
 
 export default function App() {
   const [inputText, setInputText] = useState('');
@@ -16,6 +17,7 @@ export default function App() {
   };
   return (
     <div>
+      <h4 className="headerText">TO-DO..</h4>
       <Child1
         todos={todos}
         setTodos={setTodos}
