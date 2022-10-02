@@ -20,7 +20,7 @@ const Todo = ({ text, todo, setTodos, todos }) => {
   };
   return (
     <div>
-      <li className={'todoText ${todo.completed ? "completed" : ""} '}>
+      <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
         {text}
       </li>
       <button className="deleteButton" onClick={DeleteHandler}>
