@@ -19,18 +19,25 @@ const Todo = ({ text, todo, setTodos, todos }) => {
     );
   };
   return (
-    <div>
-      <li className={`todo-item ${todo.completed ? "completed" : ''  }`}>
-        {text}
-      </li>
-      <button className="deleteButton" onClick={DeleteHandler}>
-        delete
-        <i></i>
-      </button>
-      <button className="checkButton" onClick={checkHandler}>
-        check
-        <i></i>
-      </button>
+    <div className="eachItem">
+      <div className="eachItem-text">
+        <div>
+          <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
+            {text}
+          </li>
+        </div>
+      </div>
+      <div className="eachItem-btn-flexend">
+        <button className="deleteButton" onClick={DeleteHandler}>
+          delete
+          <i></i>
+        </button>
+
+        <button className="checkButton" onClick={checkHandler}>
+          check
+          <i></i>
+        </button>
+      </div>
     </div>
   );
 };

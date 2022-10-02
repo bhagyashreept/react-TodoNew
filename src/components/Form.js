@@ -23,7 +23,7 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
         <input type="text" value={inputText} onChange={getNameHandler}></input>
       </div>
       <div>
-        <button className="button" onClick={submitHandler}>
+        <button className="AddButton" onClick={submitHandler}>
           Add
         </button>
       </div>

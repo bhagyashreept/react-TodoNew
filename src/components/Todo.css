@@ -1,6 +1,6 @@
 .todo-item {
-  color: rgb(255, 252, 252);
-  background-color: rgb(101, 109, 110);
+  color: rgb(24, 8, 8);
+  background-color: rgb(208, 222, 224);
 }
 
 .completed {
@@ -32,15 +32,27 @@
 }
 
 .textCss {
-  background-color: cornflowerblue;
+  background-color: rgb(4, 8, 17);
 }
-.AddButton {
-  border: rgb(212, 231, 231);
-  background-color: rgb(212, 231, 231);
+.eachItem-text {
+  word-break: break-all;
+}
+.eachItem-btn-flexend {
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 200px) {
   .button {
     width: 100%;
+    background-color: rgb(106, 231, 231);
   }
+  .AddButton {
+    border: rgb(212, 231, 231);
+    background-color: rgb(106, 231, 231);
+    width: 100%;
+  }
+}
+.eachItem {
+  display: flex;
+  justify-content: space-between;
 }
