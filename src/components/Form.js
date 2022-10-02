@@ -20,8 +20,10 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
   return (
     <>
       <div>
-        <input type="text" className="textCss" value={inputText} onChange={getNameHandler}></input>
-        <button className="AddButton" onClick={submitHandler}>
+        <input type="text" value={inputText} onChange={getNameHandler}></input>
+      </div>
+      <div>
+        <button className="button" onClick={submitHandler}>
           Add
         </button>
       </div>
