@@ -7,13 +7,39 @@
 }
 
 .deleteButton {
-  background-color: brown;
+  border: rgb(248, 127, 97);
+  background-color: rgb(248, 127, 97);
+}
+
+.deleteButton:hover {
+  border: rgb(206, 187, 183);
+  background-color: rgb(206, 187, 183);
 }
 
 .checkButton {
-  background-color: aquamarine;
+  border: rgb(11, 102, 69);
+  background-color: rgb(69, 172, 134);
+}
+
+.checkButton:hover {
+  border: rgb(185, 243, 222);
+  background-color: rgb(185, 243, 222);
 }
 
 .headerText {
   color: brown;
+}
+
+.textCss {
+  background-color: cornflowerblue;
+}
+.AddButton {
+  border: rgb(212, 231, 231);
+  background-color: rgb(212, 231, 231);
+}
+
+.AddButtonMedia @media (min-width: 768px) {
+  .button {
+    width: auto;
+  }
 }
