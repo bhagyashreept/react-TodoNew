@@ -16,7 +16,7 @@ export default function App() {
     // console.log(getName);
   };
   return (
-    <div>
+    <div className="MainDiv">
       <h4 className="headerText">TO-DO..</h4>
       <Form
         todos={todos}

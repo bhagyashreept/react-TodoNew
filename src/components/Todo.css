@@ -28,28 +28,39 @@
 }
 
 .headerText {
-  color: brown;
+  color: rgb(12, 6, 6);
 }
 
 .textCss {
   background-color: rgb(4, 8, 17);
 }
+.eachItem-children {
+  flex-basis: auto;
+}
+
 .eachItem-text {
-  word-break: break-all;
+  width: 45%;
+  background-color: rgb(51, 255, 0);
 }
 .eachItem-btn-flexend {
   justify-content: flex-end;
 }
 
+.MainDiv {
+  background-color: rgb(173, 226, 226);
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.AddButton {
+  border: rgb(66, 192, 192);
+  background-color: rgb(61, 180, 180);
+  width: 50%;
+}
 @media only screen and (max-width: 200px) {
   .button {
     width: 100%;
     background-color: rgb(106, 231, 231);
-  }
-  .AddButton {
-    border: rgb(212, 231, 231);
-    background-color: rgb(106, 231, 231);
-    width: 100%;
   }
 }
 .eachItem {
