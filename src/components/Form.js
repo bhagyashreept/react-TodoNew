@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Todo.css';
 
 const Form = ({ setInputText, setTodos, todos, inputText }) => {
+  
   const getNameHandler = (e) => {
     e.preventDefault();
     setInputText(e.target.value);
@@ -10,10 +11,12 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
     setTodos([
       ...todos,
       { text: inputText, completed: false, id: Math.random() * 1000 },
     ]);
+
     setInputText('');
   };
 

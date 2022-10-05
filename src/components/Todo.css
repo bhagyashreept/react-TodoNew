@@ -1,3 +1,10 @@
+.MainDiv {
+  background-color: rgb(173, 226, 226);
+  align-items: center;
+  width: 50%;
+  margin-left: 25%;
+}
+
 .todo-item {
   color: rgb(24, 8, 8);
   background-color: rgb(208, 222, 224);
@@ -39,19 +46,12 @@
 }
 
 .eachItem-text {
-  width: 45%;
-  background-color: rgb(51, 255, 0);
+  background-color: rgb(77, 42, 122);
 }
 .eachItem-btn-flexend {
   justify-content: flex-end;
 }
 
-.MainDiv {
-  background-color: rgb(173, 226, 226);
-  align-items: center;
-  margin-left: 25%;
-  margin-right: 25%;
-}
 .AddButton {
   border: rgb(66, 192, 192);
   background-color: rgb(61, 180, 180);
