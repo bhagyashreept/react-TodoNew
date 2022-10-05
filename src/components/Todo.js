@@ -21,7 +21,7 @@ const Todo = ({ text, todo, setTodos, todos }) => {
   return (
     <div className="eachItem">
       <div className="eachItem-children">
-        <div className="eachItem-text" >
+        <div className="eachItem-text">
           <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
             {text}
           </li>
