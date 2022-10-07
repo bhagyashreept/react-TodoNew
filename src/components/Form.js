@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Todo.css';
+import Card from './Card.js';
 
 const Form = ({ setInputText, setTodos, todos, inputText }) => {
-  
   const getNameHandler = (e) => {
     e.preventDefault();
     setInputText(e.target.value);
@@ -21,7 +21,7 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
   };
 
   return (
-    <>
+    <Card>
       <div>
         <input type="text" value={inputText} onChange={getNameHandler}></input>
       </div>
@@ -30,7 +30,7 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
           Add
         </button>
       </div>
-    </>
+    </Card>
   );
 };
 
