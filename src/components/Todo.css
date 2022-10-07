@@ -1,4 +1,4 @@
-html{
+html {
   background-color: rgb(81, 102, 102);
 }
 
@@ -7,6 +7,8 @@ html{
   align-items: center;
   width: 50%;
   margin-left: 25%;
+  border-radius: 15px;
+  padding: 50px;
 }
 
 .todo-item {
@@ -43,7 +45,10 @@ html{
 }
 
 .textCss {
-  background-color: rgb(4, 8, 17);
+  border-radius: 7px;
+  border-color: aqua;
+  height: 25px;
+  width: 250px;
 }
 .eachItem-children {
   flex-basis: auto;
@@ -57,10 +62,19 @@ html{
 }
 
 .AddButton {
-  border: rgb(66, 192, 192);
+  border: rgb(39, 22, 102);
   background-color: rgb(61, 180, 180);
-  width: 50%;
+  margin-top: 10px;
+  font: inherit;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
 }
+
+.AddButton:hover {
+  background-color: rgb(48, 105, 105);
+}
+
 @media only screen and (max-width: 200px) {
   .button {
     width: 100%;
@@ -70,4 +84,5 @@ html{
 .eachItem {
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }

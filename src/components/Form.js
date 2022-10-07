@@ -23,7 +23,12 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
   return (
     <Card>
       <div>
-        <input type="text" value={inputText} onChange={getNameHandler}></input>
+        <input
+          className="textCss"
+          type="text"
+          value={inputText}
+          onChange={getNameHandler}
+        ></input>
       </div>
       <div>
         <button className="AddButton" onClick={submitHandler}>
