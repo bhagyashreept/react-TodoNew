@@ -1,5 +1,5 @@
 html {
-  background-color: rgb(81, 102, 102);
+  background-color: rgb(201, 221, 221);
 }
 
 .MainDiv {
@@ -9,6 +9,7 @@ html {
   margin-left: 25%;
   border-radius: 15px;
   padding: 50px;
+  box-shadow: 10px solid black;
 }
 
 .todo-item {
