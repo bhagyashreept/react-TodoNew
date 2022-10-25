@@ -9,16 +9,33 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
     console.log(e.target.value);
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
+  async function submitHandler() {
+    console.log('HELLO');
+    const currentinputText = {
+      text: inputText,
+      completed: false,
+      id: Math.random() * 1000,
+    };
+    const response = await fetch(
+      'https://react-http-42c1d-default-rtdb.firebaseio.com/todos.json',
+      {
+        method: 'POST',
+        body: JSON.stringify(currentinputText),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    const data = await response.json();
+    console.log(data);
 
-    setTodos([
-      ...todos,
-      { text: inputText, completed: false, id: Math.random() * 1000 },
-    ]);
+    // setTodos([
+    //   ...todos,
+    //   { text: inputText, completed: false, id: Math.random() * 1000 },
+    // ]);
 
     setInputText('');
-  };
+  }
 
   return (
     <Card>
