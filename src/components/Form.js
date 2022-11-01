@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './Todo.css';
 import Card from './Card.js';
 
@@ -9,6 +9,35 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
     console.log(e.target.value);
   };
 
+  useEffect(() => {
+    onGetClickHandler();
+  }, []);
+
+  const onGetClickHandler = useCallback(async () => {
+    console.log('in get function');
+
+    const response = await fetch(
+      'https://react-http-42c1d-default-rtdb.firebaseio.com/todos.json'
+    );
+    console.log('response' + response);
+
+    const data = await response.json();
+    console.log('response' + data);
+    const loadedMovies = [];
+
+    for (const key in data) {
+      loadedMovies.push({
+        id: key,
+        text: data[key].text,
+        completed: data[key].completed,
+      });
+    }
+    console.log('loadtodas' + loadedMovies);
+    setTodos(loadedMovies);
+    console.log('loadtodas' + todos);
+  }, []);
+
+  //useEffect(()=>{},[])
   async function submitHandler() {
     console.log('HELLO');
     const currentinputText = {
