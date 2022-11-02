@@ -51,10 +51,10 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
     );
     const data = await response.json();
 
-    // setTodos([
-    //   ...todos,
-    //   { text: inputText, completed: false, id: Math.random() * 1000 },
-    // ]);
+    setTodos([
+      ...todos,
+      { text: inputText, completed: false, id: Math.random() * 1000 },
+    ]);
 
     setInputText('');
   }

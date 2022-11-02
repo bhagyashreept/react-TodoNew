@@ -1,9 +1,15 @@
 import React from 'react';
 import './Todo.css';
 const Todo = ({ text, todo, setTodos, todos }) => {
-  const DeleteHandler = () => {
+  async function DeleteHandler() {
     setTodos(todos.filter((el) => el.id !== todo.id));
-  };
+    const response = await fetch(
+      'https://react-http-42c1d-default-rtdb.firebaseio.com/todos.json',
+      {
+        method: 'DELETE',
+      }
+    );
+  }
 
   const checkHandler = () => {
     setTodos(
