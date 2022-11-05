@@ -34,7 +34,7 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
 
   //useEffect(()=>{},[])
   async function submitHandler() {
-    const currentinputText = {
+    const currentInputText = {
       text: inputText,
       completed: false,
       id: Math.random() * 1000,
@@ -43,7 +43,7 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
       'https://react-http-42c1d-default-rtdb.firebaseio.com/todos.json',
       {
         method: 'POST',
-        body: JSON.stringify(currentinputText),
+        body: JSON.stringify(currentInputText),
         headers: {
           'Content-Type': 'application/json',
         },

@@ -1,15 +1,26 @@
 import React from 'react';
 import './Todo.css';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
 const Todo = ({ text, todo, setTodos, todos }) => {
   async function DeleteHandler() {
+    console.log('in deletehandler todos');
     setTodos(todos.filter((el) => el.id !== todo.id));
+    console.log('After set todos');
     const response = await fetch(
-      'https://react-http-42c1d-default-rtdb.firebaseio.com/todos.json',
+      `https://react-http-42c1d.firebaseio.com/todos.json/${todo.id}`,
       {
         method: 'DELETE',
+        header: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
       }
     );
+    console.log('After response todos', response);
   }
+
 
   const checkHandler = () => {
     setTodos(
