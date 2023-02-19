@@ -2,6 +2,8 @@ import React from 'react';
 import './Todo.css';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import Button from '@mui/material/Button';
+import PeerDepsExternalPlugin from 'rollup-plugin-peer-deps-external';
 
 const Todo = ({ text, todo, setTodos, todos }) => {
   async function DeleteHandler() {
@@ -39,15 +41,27 @@ const Todo = ({ text, todo, setTodos, todos }) => {
           </li>
         </div>
         <div className="eachItem-btn-flexend">
-          <button className="deleteButton" onClick={DeleteHandler}>
+          <Button
+            className="deleteButton"
+            variant="outlined"
+            color="error"
+            size="small"
+            onClick={DeleteHandler}
+          >
             delete
             <i></i>
-          </button>
+          </Button>
 
-          <button className="checkButton" onClick={checkHandler}>
+          <Button
+            className="checkButton"
+            variant="outlined"
+            color="success"
+            size="small"
+            onClick={checkHandler}
+          >
             check
             <i></i>
-          </button>
+          </Button>
         </div>
       </div>
     </div>

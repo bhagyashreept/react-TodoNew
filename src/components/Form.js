@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import './Todo.css';
 import Card from './Card.js';
+import Button from '@mui/material/Button';
+import PeerDepsExternalPlugin from 'rollup-plugin-peer-deps-external';
 
 const Form = ({ setInputText, setTodos, todos, inputText }) => {
   const getNameHandler = (e) => {
@@ -19,7 +21,7 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
 
     const data = await response.json();
 
-    const loadedMovies = [];
+    // const loadedMovies = [];
 
     for (const key in data) {
       loadedMovies.push({
@@ -70,9 +72,14 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
         ></input>
       </div>
       <div>
-        <button className="AddButton" onClick={submitHandler}>
+        <Button
+          className="AddButton"
+          variant="outlined"
+          size="small"
+          onClick={submitHandler}
+        >
           Add
-        </button>
+        </Button>
       </div>
     </Card>
   );
